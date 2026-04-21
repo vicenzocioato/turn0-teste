@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mountain-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mountain {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.mtn-1 {
+    height: 45vh;
+    background: hsla(238, 81%, 15%, 1);
+    clip-path: polygon(0% 100%, 10% 70%, 25% 85%, 45% 60%, 65% 80%, 85% 50%, 100% 75%, 100% 100%);
+    opacity: 0.5;
+}
+
+.mtn-2 {
+    height: 30vh;
+    background: hsla(238, 81%, 34%, 1);
+    clip-path: polygon(0% 100%, 15% 50%, 35% 75%, 55% 40%, 75% 70%, 90% 45%, 100% 60%, 100% 100%);
+    opacity: 0.8;
+}
+
+.mtn-3 {
+    height: 15vh;
+    background: linear-gradient(to top, #10159C, #a07d0933);
+    clip-path: polygon(0% 100%, 20% 40%, 45% 65%, 70% 30%, 100% 70%, 100% 100%);
+    border-top: 2px solid #a07d09;}
+
+    
+body {
+    background: linear-gradient(180deg, #000000 0%, hsla(238, 81%, 20%, 1) 100%);
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .option{
+    opacity: 100%;
+}
+h2 i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2 p {
+    font-weight: bolder;
+}
+.option{
+    transition: all 0.3s ease;
+    opacity: 0;
+    font-size: 15pt;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+header div{
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 20pt;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin: 15px
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.modal-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: rgb(8, 8, 53);
+    width: 110%;
+    max-width: 1050px;
+    max-height: 90vh;
+    padding: 50px;
+    border-radius: 24px;
+    position: relative;
+    overflow-y: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+
+.modal-container label,
+.modal-container h3 {
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.modal-container input[type="text"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    outline: none;
+}
+
+.modal-content {
+    display: flex;
+    gap: 40px;
+}
+
+.btn-back {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    transform: scale(1.1);
+}
+
+.btn-save {
+    background-color: rgba(0,0,0,0.3);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px 50px;
+    font-size: 24px;
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-save:hover {
+    filter: brightness(1.2);
+}
+
+#add{cursor: pointer;}
+
+.edit{transition: all 0.3s ease;}
+.edit:hover{cursor: pointer; transform: scale(1.1);}
